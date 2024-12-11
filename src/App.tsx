@@ -15,6 +15,7 @@ export const goodsFromServer: string[] = [
   'Garlic',
 ];
 
+// write code
 // Enum for sorting types
 enum SortType {
   Default = 'default',
@@ -29,6 +30,7 @@ export const App: React.FC = () => {
 
   const handleSortAlphabetically = () => {
     const sortedGoods = [...goodsFromServer].sort((a, b) => a.localeCompare(b));
+
     setGoods(sortedGoods);
     setSortType(SortType.Alphabetical);
     setIsReversed(false);
@@ -38,6 +40,7 @@ export const App: React.FC = () => {
     const sortedGoods = [...goodsFromServer].sort(
       (a, b) => a.length - b.length,
     );
+
     setGoods(sortedGoods);
     setSortType(SortType.Length);
     setIsReversed(false);
